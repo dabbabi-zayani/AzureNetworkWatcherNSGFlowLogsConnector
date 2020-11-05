@@ -167,8 +167,7 @@
             },
             "properties": {
                 "name": "[variables('Consumption')]",
-                "computeMode": "Dynamic",
-                "sku": "Dynamic"
+                "computeMode": "Dynamic"
             }
         },
         {
