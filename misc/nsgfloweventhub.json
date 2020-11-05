@@ -267,10 +267,7 @@
                 {
                     "apiVersion": "2015-08-01",
                     "name": "web",
-                    "type": "sourcecontrols",
-                    "dependsOn": [
-                        "[resourceId('Microsoft.Web/Sites', variables('functionAppName'))]"
-                    ],
+                    "type": "sourcecontrols",                 
                     "properties": {
                         "repoUrl": "[parameters('githubRepoURL')]",
                         "branch": "[parameters('githubRepoBranch')]",
