@@ -158,14 +158,17 @@
             "apiVersion": "2016-09-01",
             "name": "[variables('Consumption')]",
             "location": "[resourceGroup().location]",
+	    "sku": {
+                "name": "Y1",
+                "tier": "Dynamic",
+                "size": "Y1",
+                "family": "Y",
+                "capacity": 0
+            },
             "properties": {
                 "name": "[variables('Consumption')]",
-                "computeMode": "Dynamic"
-            },
-			"sku": {
-                "tier": "[parameters('appServicePlanTier')]",
-                "name": "[parameters('appServicePlanName')]",
-                "capacity": "[parameters('appServicePlanCapacity')]"
+                "computeMode": "Dynamic",
+                "sku": "Dynamic"
             }
         },
         {
