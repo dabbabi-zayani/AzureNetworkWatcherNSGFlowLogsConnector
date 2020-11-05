@@ -266,15 +266,15 @@
             "resources": [
                 {
                     "apiVersion": "2016-08-01",
-                    "name": "web",
+                    "kind": "web",
                     "type": "sourcecontrols",
                     "dependsOn": [
                         "[resourceId('Microsoft.Web/Sites', variables('functionAppName'))]"
                     ],
                     "properties": {
-                        "RepoUrl": "[parameters('githubRepoURL')]",
+                        "repoUrl": "[parameters('githubRepoURL')]",
                         "branch": "[parameters('githubRepoBranch')]",
-                        "IsManualIntegration": true
+                        "isManualIntegration": true
                     }
                 }
             ]
